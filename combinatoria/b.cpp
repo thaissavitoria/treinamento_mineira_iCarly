@@ -12,33 +12,28 @@ typedef unsigned long long ll;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
-#include <iostream>
+ll calcularCombinacoes(int n) {
+    ll opcoes = 7290;
 
-using namespace std;
-
-ll calcularCombinações(int n) {
-
-    ll opções = 7290;
-
-    if(n>4){
-        for(int i=0;i<(n-4);i++){
-            opções = opções*9;
+    if (n > 4) {
+        for (int i = 0;i < (n - 4);i++) {
+            opcoes = opcoes * 9;
         }
 
-        return opções;
+        return opcoes;
 
-    }else{
-        return opções;
+    } else {
+        return opcoes;
     }
-   
+
 }
 int main() {
 
     int numDígitos;
     cin >> numDígitos;
 
-    ll combinações = calcularCombinações(numDígitos);
-    cout<< combinações << endl;
+    ll combinacoes = calcularCombinacoes(numDígitos);
+    cout << combinacoes << endl;
 
     return 0;
 }

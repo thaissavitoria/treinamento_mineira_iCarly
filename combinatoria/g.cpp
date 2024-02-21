@@ -1,10 +1,18 @@
-#include <iostream>
-#include <vector>
-#include <sstream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-void generateCombinations(vector<string>& elements, int k, int start, string result) {
+#define _ ios_base::sync_with_stdio(0); cin.tie(0);
+#define endl '\n'
+
+#define dbg(x) cout << #x << " = " << x << endl
+
+typedef unsigned long long ll;
+
+const int INF = 0x3f3f3f3f;
+const ll LINF = 0x3f3f3f3f3f3f3f3fll;
+
+void generateCombinations(vector<string> &elements, int k, int start, string result) {
     if (k == 0) {
         cout << result << endl;
         return;
@@ -18,6 +26,7 @@ void generateCombinations(vector<string>& elements, int k, int start, string res
 }
 
 int main() {
+    _;
     string input;
     cout << "Digite os elementos separados por vírgula (sem espaço): ";
     getline(cin, input);
